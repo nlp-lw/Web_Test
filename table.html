@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+
+<html>
+    <body>
+        <!-- 改变border的值即可改变边框外侧的宽度 -->
+        <!-- cellpadding指内容和边框的距离, cellspacing指单元格之间的距离 -->
+        <table border="1" cellpadding="100" cellspacing="10">
+            <caption>表名字</caption>
+            <th>Heading</th>
+            <th>Another Heading</th>
+            <!-- tr->table row; td->table data -->
+            <tr>
+                <td>第一个单元格</td>
+                <td>第二个单元格</td>
+            </tr>
+
+            <tr>
+                <!-- 使用 "&nbsp;" 处理没有内容的单元格。 -->
+                <td>&nbsp;</td>
+                <td>空单元格用占位符来避免显示错误</td>
+            </tr>
+        </table>
+
+        <h4>横跨两列的单元格：</h4>
+        <table border="1">
+            <tr>
+                <th>姓名</th>
+                <!-- colspan;一个单元格占一行中的2列 -->
+                <th colspan="2">电话</th>
+            </tr>
+            <tr>
+                <td>Bill Gates</td>
+                <td>555 77 854</td>
+                <td>555 77 855</td>
+            </tr>
+        </table>
+
+        <h4>横跨两行的单元格：</h4>
+        <table border="1">
+            <tr>
+                <th>姓名</th>
+                <td>Bill Gates</td>
+            </tr>
+            <tr>
+                <th rowspan="2">电话</th>
+                <td>555 77 854</td>
+            </tr>
+            <tr>
+                <td>555 77 855</td>
+            </tr>
+        </table>
+    </body>
+</html>

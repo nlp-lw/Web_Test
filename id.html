@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+    <!-- 
+        使用 id 属性
+            id 属性指定 HTML 元素的唯一 ID。 
+            id 属性的值在 HTML 文档中必须是唯一的。(不可重复)
+
+            id 属性用于指向样式表中的特定样式声明。
+            JavaScript 也可使用它来访问和操作拥有特定 ID 的元素。
+
+            id 的语法是：写一个井号 (#)，后跟一个 id 名称。
+            然后，在花括号 {} 中定义 CSS 属性。
+
+        注释：
+            id 名称对大小写敏感！
+            id 必须包含至少一个字符，且不能包含空白字符（空格、制表符等）。
+     -->
+    <head>
+        <style>
+            #myHeader {
+                background-color: lightblue;
+                color: black;
+                padding: 50px;
+                text-align: center;
+            }
+            .city {
+                background-color: tomato;
+                color: white;
+                padding: 10px;
+            }
+        </style>
+    </head>
+
+    <body>
+        <!-- 同一个类名可以由多个 HTML 元素使用，
+            而一个 id 名称只能由页面中的一个 HTML 元素使用： -->
+        <h1 id="myHeader">My Cities</h1>
+        
+        <h1>在 JavaScript 中使用 id 属性</h1>
+
+        <p>JavaScript 可以使用 getElementById() 方法访问具有指定 ID 的元素：</p>
+
+        <h2 id="myHeader1">Hello World!</h2>
+        <button onclick="displayResult()">改变文本</button>
+
+        <script>
+            function displayResult() {
+                document.getElementById("myHeader1").innerHTML = "Have a nice day!";
+            }
+        </script>
+
+        <!-- id同样可以做书签 -->
+        <a href="#Tokyo">Tokyo</a>
+
+        <!-- 拥有相同类名的多个元素 -->
+        <h2 class="city">London</h2>
+        <p>London is the capital of England.</p>
+        
+        <h2 class="city">Paris</h2>
+        <p>Paris is the capital of France.</p>
+        
+        <p>.........</p>
+        <p>.........</p>
+        <p>.........</p>
+        <p>.........</p>
+        <p>.........</p>
+        <p>.........</p>
+        <p>.........</p>
+        <p>.........</p>
+        <p>.........</p>
+        <p>.........</p>
+        <p>.........</p>
+        <p>.........</p>
+        <p>.........</p>
+        <p>.........</p>
+        <p>.........</p>
+        <h2 class="city"><span id="Tokyo">Tokyo</span></h2>
+        <p>Tokyo is the capital of Japan.</p>
+    </body>
+</html>
